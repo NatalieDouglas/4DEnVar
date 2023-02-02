@@ -17,7 +17,7 @@ You may need to tweak the code in fourDEnVar.py if your data files are not in .d
 The 'linear tests' folder contains all of the relevant files required to implement 4DEnVar for yourself. This includes all data files as listed above, a .py file which imports fourDEnVar_engine.py as a module and creates a plot to demonstrate the use of 4DEnVar. Please note that you will have to amend code line 4 in genLinear.py to point to the directory where you will store the fourDEnVar_engine.py file.
 
 Running the genLinear.py file should produce the following image:
-![linear_example](linear_tests/linear_example.png)
+![linear_example](https://user-images.githubusercontent.com/93133873/216400849-c8fd1094-3672-4754-9df7-47f96f8c0668.png)
 
 The state vector in this example is given by the three coefficients of a quadratic (the model is linear in the coefficients). 
 
