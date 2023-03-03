@@ -6,9 +6,13 @@ In the main branch of this repository you will find a PDF that explains the math
 two .py files: fourDEnVar.py and fourDEnVar_engine.py - the former to import the required data files to run 4DEnVar and the latter to apply the method as detailed in the notes. The required data files are:
 
 Xb.dat - an array of the ensemble of background state vectors (with dimensions state by ensemble size)
+
 hX.dat - an array of simulated observations, the ensemble mapped to observation space (with dimensions observations by ensemble size)
+
 y.dat - a vector of the observations
+
 R.dat - the observation error covariance matrix (with dimensions observations by observations)
+
 hxbar.dat - a vector of the background ensemble mean mapped to observation space
 
 You may need to tweak the code in fourDEnVar.py if your data files are not in .dat format.
