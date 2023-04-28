@@ -79,7 +79,7 @@ class fourDEnVar_engine:
         work2=np.dot(self.R_inv, work1)
         
         # EQUATION 11 in 4DEnVar notes:
-        df=np.dot(self.Yb_dash.T,work2)
+        df=w+np.dot(self.Yb_dash.T,work2)
       
         return df
  
@@ -91,12 +91,10 @@ class fourDEnVar_engine:
         if np.allclose(work2,work2.T) and np.all(np.linalg.eigvals(work2) > 0):
             print('Xbdash*inv(I+Ybdash^T*Rinv*Ybdash)*Xbdash^T is symmetric and all eigenvalues are positive')
          
-        work3 = np.linalg.cholesky(work2)
-        #print('Lower triangular matrix from Cholesky decomposition:')
-        #print(work3)
+        work3 = np.linalg.pinv(work2)
         
         # EQUATION 15 in 4DEnVar notes:
-        Wa = inv(work3) # temporary
+        Wa = np.linalg.cholesky(work3)
         # EQUATION 14 in 4DEnVar notes:
         Xa_dash = np.dot(self.Xb_dash,Wa)
         # EQUATION 13 in 4DEnVar notes:
