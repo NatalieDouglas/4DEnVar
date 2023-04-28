@@ -100,7 +100,7 @@ if __name__=="__main__":
     # run 4DEnVar
     x=fourDEnVar_engine.fourDEnVar_engine(xb, hx, y, R, hx_bar)  
     print("minimisation analysis: xa = : " + str(x.xa))
-    print("analytical analysis: xa_check = : " + str(x.xa_check))
+    #print("analytical analysis: xa_check = : " + str(x.xa_check))
     
     truth=[2.,1.1,0.] # true parameters/coefficients
     xb_bar=np.mean(xb,1) # prior from ensemble mean
