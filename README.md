@@ -18,7 +18,7 @@ hxbar.dat - a vector of the background ensemble mean mapped to observation space
 You may need to tweak the code in fourDEnVar.py if your data files are not in .dat format.
     
 ## Linear Tests
-The 'linear tests' folder contains all of the relevant files required to implement 4DEnVar for yourself. This includes all data files as listed above, a .py file which imports fourDEnVar_engine.py as a module and creates a plot to demonstrate the use of 4DEnVar. Please note that you will have to amend code line 4 in genLinear.py to point to the directory where you will store the fourDEnVar_engine.py file.
+The 'linear tests' folder contains all of the relevant files required to implement 4DEnVar for yourself in a basic linear example. This includes all data files as listed above, a .py file which imports fourDEnVar_engine.py as a module and creates a plot to demonstrate the use of 4DEnVar. Please note that you will have to amend code line 4 in genLinear.py to point to the directory where you will store the fourDEnVar_engine.py file.
 
 Running the genLinear.py file should produce the following image:
 ![linear_example](https://user-images.githubusercontent.com/93133873/216400849-c8fd1094-3672-4754-9df7-47f96f8c0668.png)
@@ -26,5 +26,7 @@ Running the genLinear.py file should produce the following image:
 The state vector in this example is given by the three coefficients of a quadratic (the model is linear in the coefficients). 
 
 
-## Still to come
-I am currently working on some zero order tests that allows one to explore the prior and posterior distributions when implementing 4DEnVar. These will be uploaded shortly. It is likely that the notes and code will be updated from time to time (with dimensionality checks and revised inverse techniques, for example) so it is recommended that you 'watch' this repository for updates.
+## Toy Carbon Model
+If you wish to investigate the 4DEnVar method further, the 'ToyCarbonModel' folder has code for you to do this for a simple idealised carbon model as used in the [OptIC project](https://www.globalcarbonproject.org/activities/OptIC.htm). You will find code that was primarily written to find optimal parameter sets given synthetic observations generated from model runs. The code also examines prior and posterior parameter distributions, their error covariance matrices, the various tests required for use of 4DEnVar and a copmarison of RMSE with ensemble size.
+ 
+It is likely that the notes and code will be updated from time to time (with dimensionality checks and revised inverse techniques, for example) so it is recommended that you 'watch' this repository for updates.
