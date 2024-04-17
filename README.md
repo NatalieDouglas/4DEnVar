@@ -27,6 +27,6 @@ The state vector in this example is given by the three coefficients of a quadrat
 
 
 ## Toy Carbon Model
-If you wish to investigate the 4DEnVar method further, the 'ToyCarbonModel' folder has code for you to do this for a simple idealised carbon model as used in the [OptIC project](https://www.globalcarbonproject.org/activities/OptIC.htm). You will find code that was primarily written to find optimal parameter sets given synthetic observations generated from model runs. The code also examines prior and posterior parameter distributions, their error covariance matrices, the various tests required for use of 4DEnVar and a copmarison of RMSE with ensemble size.
+If you wish to investigate the 4DEnVar method further, the 'ToyCarbonModel' folder has code for you to do this for a simple idealised carbon model as used in the [OptIC project](https://www.globalcarbonproject.org/activities/OptIC.htm). The state vector in this case is the vector of 4 parameters present in the carbon model equations. You will find code that was primarily written to find optimal parameter sets given synthetic observations generated from model runs. The code also examines prior and posterior parameter distributions, their error covariance matrices, the various tests required for use of 4DEnVar and a copmarison of RMSE with ensemble size.
  
 It is likely that the notes and code will be updated from time to time (with dimensionality checks and revised inverse techniques, for example) so it is recommended that you 'watch' this repository for updates.
