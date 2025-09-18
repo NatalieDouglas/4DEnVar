@@ -46,7 +46,7 @@ class fourDEnVar_engine:
     # MINIMISATION PROCEDURE
     def fourDEnVar(self):
 
-        minimiser = spop.minimize(self.fourDEnVar_cost_f, np.zeros((self.nens,1)), method='L-BFGS-B', jac=self.fourDEnVar_cost_df,                                          options={'gtol': 1e-16,'maxiter':100})
+        minimiser = spop.minimize(self.fourDEnVar_cost_f, np.zeros((self.nens,1)).flatten(), method='L-BFGS-B', jac=self.fourDEnVar_cost_df,                                          options={'gtol': 1e-16,'maxiter':100})
         # EQUATION 8 in 4DEnVar notes:
         self.xa=self.xbar+np.dot(self.Xb_dash, minimiser.x)  
         

@@ -41,7 +41,7 @@ class fourDEnVar_engine_gamma:
     
     def fourDEnVar(self):
 
-        minimiser = spop.minimize(self.fourDEnVar_cost_f, np.zeros((self.nens,1)), method='L-BFGS-B',                                                    jac=self.fourDEnVar_cost_df, options={'gtol': 1e-16,'maxiter':10000000},callback=self.callbackF)
+        minimiser = spop.minimize(self.fourDEnVar_cost_f, np.zeros((self.nens,1)).flatten(), method='L-BFGS-B',                                                    jac=self.fourDEnVar_cost_df, options={'gtol': 1e-16,'maxiter':10000000},callback=self.callbackF)
 
         # EQUATION 8 in 4DEnVar notes:
         self.w=minimiser.x
